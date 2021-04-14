@@ -43,20 +43,20 @@ function RestaurantList(props) {
             <Col xs="6" sm="4" key={res.id}>
               <Card style={{ margin: "0 0.5rem 20px 0.5rem" }}>
                 <CardImg
-                  top={true}
-                  style={{ height: 250 }}
+                  top
+                  width="100%"
                   src={`${process.env.NEXT_PUBLIC_API_URL}${res.image[0].url}`}
                 />
                 <CardBody>
                   <CardTitle>{res.name}</CardTitle>
-                  <CardText>{res.description}</CardText>
+                  <CardText>{res.description.slice(0, 280)}...</CardText>
                 </CardBody>
                 <div className="card-footer">
                   <Link
                     as={`/restaurants/${res.id}`}
                     href={`/restaurants?id=${res.id}`}
                   >
-                    <a className="btn btn-primary">View</a>
+                    <a className="btn btn-secondary">View</a>
                   </Link>
                 </div>
               </Card>

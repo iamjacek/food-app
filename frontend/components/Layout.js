@@ -5,7 +5,7 @@ import Link from "next/link"
 import { Container, Nav, NavItem } from "reactstrap"
 
 export default function Layout(props) {
-  const title = "Welcome to Nextjs"
+  const title = "Restaurants in Coventry"
   return (
     <div>
       <Head>
@@ -18,14 +18,17 @@ export default function Layout(props) {
         <style jsx>
           {`
             a {
-              color: blue;
+              color: #060606;
+            }
+            a:hover {
+              text-decoration: underline;
             }
           `}
         </style>
-        <Nav className="navbar navbar-dark bg-dark">
+        <Nav className="navbar navbar-light bg-light">
           <NavItem>
             <Link href="/">
-              <a className="navbar-brand">Home</a>
+              <a className="navbar-brand">Restaurants</a>
             </Link>
           </NavItem>
 
