@@ -2,7 +2,7 @@ import React from "react"
 import App from "next/app"
 import Head from "next/head"
 import Layout from "../components/Layout"
-import withData from "../lib/apollo"
+import withApollo from "../lib/apollo"
 
 class FoodApp extends App {
   render() {
@@ -25,4 +25,4 @@ class FoodApp extends App {
   }
 }
 
-export default withData(FoodApp)
+export default withApollo({ ssr: true })(FoodApp)
