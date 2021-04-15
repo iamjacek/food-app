@@ -40,8 +40,16 @@ function RestaurantList(props) {
       return (
         <Row>
           {searchQuery.map((res) => (
-            <Col xs="6" sm="4" key={res.id}>
-              <Card style={{ margin: "0 0.5rem 20px 0.5rem" }}>
+            <Col
+              xs="6"
+              sm="4"
+              key={res.id}
+              className="col-lg-4 col-sm-6 col-12 d-flex align-items-stretch"
+            >
+              <Card
+                style={{ margin: "0 0.5rem 20px 0.5rem" }}
+                className="min-w"
+              >
                 <CardImg
                   top
                   width="100%"
@@ -53,6 +61,7 @@ function RestaurantList(props) {
                 </CardBody>
                 <div className="card-footer">
                   <Link
+                    //decorator as to show in url bar
                     as={`/restaurants/${res.id}`}
                     href={`/restaurants?id=${res.id}`}
                   >
